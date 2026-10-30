@@ -1,0 +1,22 @@
+{
+  "name": "taskflow-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check config/db.js && node --check middleware/authMiddleware.js && node --check middleware/errorMiddleware.js && node --check controllers/authController.js && node --check controllers/projectController.js && node --check controllers/taskController.js && node --check controllers/commentController.js && node --check controllers/notificationController.js && node --check models/User.js && node --check models/Project.js && node --check models/Task.js && node --check models/Comment.js && node --check models/Notification.js && node --check routes/authRoutes.js && node --check routes/projectRoutes.js && node --check routes/taskRoutes.js && node --check routes/commentRoutes.js && node --check routes/notificationRoutes.js && node --check routes/healthRoutes.js && node --check utils/asyncHandler.js && node --check utils/validators.js && node --check utils/permissions.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.2",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.4"
+  }
+}
